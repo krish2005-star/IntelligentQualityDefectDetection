@@ -26,6 +26,15 @@ public class Complaint {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column(name = "image_path")
+    private String imagePath;
+
+    @Column(name = "defect_detected")
+    private String defectDetected;
+
+    @Column(name = "confidence_score")
+    private Double confidenceScore;
+
     @Enumerated(EnumType.STRING)
     private ComplaintStatus status;
 
