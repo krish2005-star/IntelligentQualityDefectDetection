@@ -18,6 +18,8 @@ public class ComplaintController {
 
     @Autowired
     private ComplaintService complaintService;
+    @Autowired
+    private ComplaintRepo complaintRepo;
 
     @PostMapping("/submit")
     public ResponseEntity<Complaint> submitComplaint(
@@ -48,9 +50,11 @@ public class ComplaintController {
     public ResponseEntity<Complaint> updateStatus(
             @PathVariable Long id,
             @RequestParam String status) {
+
         Complaint complaint = complaintService.getComplaintById(id);
-        complaint.setStatus(ComplaintStatus.valueOf(status));
-        Complaint save = ComplaintRepo.save(complaint);
+        complaint.setStatus(ComplaintStatus.valueOf(status.toUpperCase()));
+
+        complaintRepo.save(complaint);
         return ResponseEntity.ok(complaint);
     }
 

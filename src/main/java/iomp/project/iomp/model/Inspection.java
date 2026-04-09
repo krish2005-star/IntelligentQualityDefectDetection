@@ -36,7 +36,3 @@ public class Inspection {
         inspectionDate = LocalDateTime.now();
     }
 }
-
-enum InspectionStatus {
-    PASSED, FAILED
-}

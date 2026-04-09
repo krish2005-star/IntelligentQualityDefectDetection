@@ -11,5 +11,7 @@ public interface ComplaintRepo extends JpaRepository<Complaint, Long> {
 
     List<Complaint> findByCustomerId(Long customerId);
 
-    static List<Complaint> findByStatus(String status);
+    static List<Complaint> findByStatus(String status) {
+        return null;
+    }
 }
