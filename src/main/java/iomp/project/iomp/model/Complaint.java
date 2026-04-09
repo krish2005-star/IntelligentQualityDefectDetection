@@ -48,6 +48,6 @@ public class Complaint {
     }
 }
 
-enum ComplaintStatus {
+public enum ComplaintStatus {
     OPEN, UNDER_REVIEW, RESOLVED
 }
