@@ -35,3 +35,8 @@ build/
 venv/
 __pycache__/
 *.pyc
+# frontend
+/iomp-frontend/node_modules
+/iomp-frontend/build
+/iomp-frontend/dist
+/iomp-frontend/.env
